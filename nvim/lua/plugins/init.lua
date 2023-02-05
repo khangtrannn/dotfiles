@@ -11,7 +11,6 @@ return require('packer').startup({
   function(use)
     use 'wbthomason/packer.nvim'
 
-    -- use { 'Mofiqul/dracula.nvim', config = "require('colorscheme-config')" }
     use { 'bluz71/vim-nightfly-guicolors', config = "require('colorscheme-config')" }
 
     use("szw/vim-maximizer") -- maximizes and restores current window
@@ -84,24 +83,21 @@ return require('packer').startup({
 
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
-    -- Enable LSP
-    use {
-      'neovim/nvim-lspconfig',
-      config = "require('lsp')"
-    }
+    -- managing & installing lsp servers, linters & formatters
+    use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+    use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
-    use { "williamboman/nvim-lsp-installer" } -- Simple language server install
+    -- configuring LSP servers
+    use { 'neovim/nvim-lspconfig' }
 
-    -- Completion
+    -- configuring lsp servers
     use { 'hrsh7th/nvim-cmp' } -- The completion plugin
-    use { 'hrsh7th/cmp-nvim-lsp' }
     use { 'hrsh7th/cmp-buffer' } -- Buffer completion
-    use { 'hrsh7th/cmp-vsnip' }
     use { 'hrsh7th/cmp-nvim-lua' } -- Lua completion
-    use { 'hrsh7th/vim-vsnip' } -- Snipet completion
-    use { 'onsails/lspkind-nvim' }
-    use { 'hrsh7th/cmp-path' } -- Path completion
-    use { 'hrsh7th/cmp-cmdline' } -- Command completion
+    use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+    use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+    use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+    use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
     -- For formatting and linting
     use {
@@ -142,11 +138,6 @@ return require('packer').startup({
     }
 
     use { "terrortylor/nvim-comment", config = "require('comment-config')" }
-
-    use {
-      'tami5/lspsaga.nvim',
-      config = "require('lspsaga-config')"
-    }
 
     use { 'softoika/ngswitcher.vim' }
 

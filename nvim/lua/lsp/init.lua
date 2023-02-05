@@ -1,3 +1,4 @@
-require('lsp/cmp')
-require('lsp/diagnostic_signs')
-require('lsp/language_servers')
+require('lsp/mason');
+require('lsp/lspconfig')
+require('lsp/cmp'); -- Show nvim command menu on the status bar
+-- require('lsp/diagnostic_signs')
