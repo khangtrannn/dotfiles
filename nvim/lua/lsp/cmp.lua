@@ -55,6 +55,7 @@ cmp.setup({
     { name = 'vsnip' },
   }, {
     { name = 'buffer' },
+    { name = 'path' }
   }),
 
   formatting = {

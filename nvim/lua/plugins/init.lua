@@ -42,6 +42,8 @@ return require('packer').startup({
       config = "require('bufferline-config')"
     }
 
+    use 'kyazdani42/nvim-web-devicons'
+
     use {
       'kyazdani42/nvim-tree.lua',
       requires = {
