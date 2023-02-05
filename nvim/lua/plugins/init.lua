@@ -114,12 +114,7 @@ return require('packer').startup({
       end
     }
 
-    -- Doesn't use for now
-    -- use {
-    --   'glepnir/dashboard-nvim',
-    --   cmd = 'Dashboard',
-    --   config = "require('dashboard-config')"
-    -- }
+    use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
     use {
       "lukas-reineke/indent-blankline.nvim",
