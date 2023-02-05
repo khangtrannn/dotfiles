@@ -18,6 +18,17 @@ require 'nvim-tree'.setup {
  --  view = {
  --    adaptive_size = true,
  --  }
+ -- change folder arrow icons
+  renderer = {
+    icons = {
+      glyphs = {
+        folder = {
+          arrow_closed = "", -- arrow when folder is closed
+          arrow_open = "", -- arrow when folder is open
+        },
+      },
+    },
+  },
 }
 
 -- Auto close nvim tree if all buffers was closed

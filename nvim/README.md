@@ -12,3 +12,8 @@ ln -s ~/github/dotfiles/nvim ~/.config/nvim
 
 ### nvim-tree
 Using Hack Nerd Font to make sure icons showing properly
+
+
+### TODO
+- Custom telescope
+- Research show whichkey unless tell it to do 

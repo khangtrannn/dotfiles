@@ -11,7 +11,15 @@ return require('packer').startup({
   function(use)
     use 'wbthomason/packer.nvim'
 
-    use { 'Mofiqul/dracula.nvim', config = "require('colorscheme-config')" }
+    -- use { 'Mofiqul/dracula.nvim', config = "require('colorscheme-config')" }
+    use { 'bluz71/vim-nightfly-guicolors', config = "require('colorscheme-config')" }
+
+    use("szw/vim-maximizer") -- maximizes and restores current window
+
+    -- essential plugins
+    -- TODO: research these two packages
+    use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+    use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
     use {
       'nvim-treesitter/nvim-treesitter',
