@@ -13,6 +13,7 @@ plugins {
 
 keybinds {
   unbind "Ctrl h"
+  unbind "Ctrl s"
 }
 
 on_force_close "detach"
